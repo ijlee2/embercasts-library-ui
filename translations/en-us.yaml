@@ -1,0 +1,26 @@
+layout:
+    application:
+        application-name: Hello
+        authors: Authors
+        books: Books
+
+    index:
+        slogan: Where anyone can review their favorite books and authors!
+        welcome-message: Welcome to Ember Library
+
+    authors:
+        index:
+            add-author: Add Author
+            authors: Authors
+            search-by-author-name: Search by author name
+
+    books:
+        index:
+            add-book: Add Book
+            books: Books
+            search-by-title-or-isbn: Search by title or ISBN
+
+
+component: "1"
+
+price_banner: The {product} costs {price, number, USD}

@@ -1,0 +1,33 @@
+<div class="title">
+    <h3>{{this.model.reviews.length}} Reviews</h3>
+
+    <div class="actions">
+        <LinkTo
+            data-test-link="Add Your Review"
+            @class="btn-secondary btn-add"
+            @route="books.details.new-review"
+            @model={{this.model.id}}
+        >
+            Add Your Review
+        </LinkTo>
+    </div>
+</div>
+
+<ul class="review-list">
+    {{#each this.model.reviews as |review|}}
+        <li class="review">
+            <p>
+                {{review.body}}
+            </p>
+
+            <div class="details">
+                <p class="review-user">
+                    {{review.user}}
+                </p>
+                <p class="review-time">
+                    {{moment-from-now review.createdAt}}
+                </p>
+            </div>
+        </li>
+    {{/each}}
+</ul>

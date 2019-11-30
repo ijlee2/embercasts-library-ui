@@ -1,0 +1,10 @@
+<div class="title">
+    <h3>New Review for {{this.model.book.title}}</h3>
+</div>
+
+<ReviewForm
+    @book={{this.model.book}}
+    @review={{this.model.review}}
+    @onCancel={{this.cancelForm}}
+    @onSubmit={{this.saveReview}}
+/>

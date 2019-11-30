@@ -1,0 +1,36 @@
+<div class="app">
+    <nav class="main-nav">
+        <h1 class="logo">
+            <LinkTo
+                data-test-link={{t "layout.application.application-name"}}
+                @route="index"
+            >
+                <img src="/logo.svg" alt="" role="presentation">
+                <span class="sr-only">{{t "layout.application.application-name"}}</span>
+            </LinkTo>
+        </h1>
+
+        <ul>
+            <li>
+                <LinkTo
+                    data-test-link={{t "layout.application.authors"}}
+                    @route="authors"
+                >
+                    {{t "layout.application.authors"}}
+                </LinkTo>
+            </li>
+            <li>
+                <LinkTo
+                    data-test-link={{t "layout.application.books"}}
+                    @route="books"
+                >
+                    {{t "layout.application.books"}}
+                </LinkTo>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="app-content">
+        {{outlet}}
+    </main>
+</div>

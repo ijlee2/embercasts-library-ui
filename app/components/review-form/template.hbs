@@ -1,0 +1,39 @@
+<form {{on "submit" this.submitChanges}}>
+    <div class="field">
+        <label>Your Full Name:</label>
+        <Input
+            data-test-field="Your Full Name"
+            @type="text"
+            @value={{this.user}}
+            @placeholder="Terrence Deacon"
+        />
+    </div>
+
+    <div class="field">
+        <label>Write Your Review:</label>
+        <Textarea
+            data-test-field="Write Your Review"
+            @value={{this.body}}
+            @placeholder="I thought this book was..."
+        />
+    </div>
+
+    <div class="form-footer">
+        <button
+            data-test-button="Cancel"
+            class="btn-clear"
+            type="button"
+            {{on "click" @onCancel}}
+        >
+            Cancel
+        </button>
+
+        <button
+            data-test-button="Save"
+            class="btn-submit"
+            type="submit"
+        >
+            Save
+        </button>
+    </div>
+</form>
